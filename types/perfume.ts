@@ -1,6 +1,6 @@
 
 export interface Perfume {
-  id: string;
+  _id: string;
   name: string;
   description: string;
   price: number;
@@ -15,10 +15,12 @@ export interface Perfume {
 }
 
 export interface Review {
-  id: string;
+  _id: string;
   userId: string;
   userName: string;
   rating: number;
   comment: string;
   date: string;
+  createdAt: string;
+  updatedAt: string;
 }

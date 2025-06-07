@@ -180,7 +180,7 @@ const Shop = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                             {filteredPerfumes.map((perfume, index) => (
                                 <div 
-                                    key={perfume.id} 
+                                    key={perfume._id} 
                                     className="animate-fade-in"
                                     style={{ animationDelay: `${index * 100}ms` }}
                                 >

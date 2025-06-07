@@ -84,7 +84,7 @@ const Cart = () => {
                         <div className="space-y-4">
                             {items.map((item) => (
                                 <Card 
-                                    key={`${item.perfume.id}-${item.selectedSize}`} 
+                                    key={`${item.perfume._id}-${item.selectedSize}`} 
                                     className="overflow-hidden bg-white dark:bg-gray-800 shadow-md"
                                 >
                                     <CardContent className="p-6">
@@ -99,7 +99,7 @@ const Cart = () => {
                                             
                                             <div className="flex-1 min-w-0">
                                                 <Link
-                                                    href={`/product/${item.perfume.id}`}
+                                                    href={`/product/${item.perfume._id}`}
                                                     className="text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-purple-600"
                                                 >
                                                     {item.perfume.name}
@@ -116,7 +116,7 @@ const Cart = () => {
                                                 <Button
                                                     variant="outline"
                                                     size="icon"
-                                                    onClick={() => handleQuantityChange(item.perfume.id, item.selectedSize, item.quantity - 1)}
+                                                    onClick={() => handleQuantityChange(item.perfume._id, item.selectedSize, item.quantity - 1)}
                                                     className="h-8 w-8"
                                                 >
                                                     <Minus className="h-3 w-3" />
@@ -127,7 +127,7 @@ const Cart = () => {
                                                 <Button
                                                     variant="outline"
                                                     size="icon"
-                                                    onClick={() => handleQuantityChange(item.perfume.id, item.selectedSize, item.quantity + 1)}
+                                                    onClick={() => handleQuantityChange(item.perfume._id, item.selectedSize, item.quantity + 1)}
                                                     className="h-8 w-8"
                                                 >
                                                     <Plus className="h-3 w-3" />
@@ -141,7 +141,7 @@ const Cart = () => {
                                                 <Button
                                                     variant="ghost"
                                                     size="sm"
-                                                    onClick={() => removeFromCart(item.perfume.id, item.selectedSize)}
+                                                    onClick={() => removeFromCart(item.perfume._id, item.selectedSize)}
                                                     className="text-red-600 hover:text-red-700 hover:bg-red-50 dark:hover:bg-gray-700 mt-1"
                                                 >
                                                     <Trash2 className="h-3 w-3 mr-1" />

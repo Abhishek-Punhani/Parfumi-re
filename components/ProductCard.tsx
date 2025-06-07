@@ -34,7 +34,7 @@ const ProductCard = ({ perfume }: ProductCardProps) => {
     return (
         <Card className="group cursor-pointer overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
             <div className="relative overflow-hidden">
-                <Link href={`/product/${perfume.id}`}>
+                <Link href={`/product/${perfume._id}`}>
                     <div className="aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 relative">
                         <img
                             src={perfume.image}
@@ -83,7 +83,7 @@ const ProductCard = ({ perfume }: ProductCardProps) => {
             </div>
             
             <CardContent className="p-6 space-y-4">
-                <Link href={`/product/${perfume.id}`}>
+                <Link href={`/product/${perfume._id}`}>
                     <div className="space-y-3">
                         <div className="flex items-center justify-between">
                             <span className="text-xs font-medium text-purple-600 bg-purple-50 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 rounded-full">
